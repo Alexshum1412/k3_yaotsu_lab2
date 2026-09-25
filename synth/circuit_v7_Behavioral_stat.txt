@@ -1,0 +1,18 @@
+
+4. Printing statistics.
+
+=== circuit_v7 ===
+
+   Number of wires:                 12
+   Number of wire bits:             15
+   Number of public wires:           8
+   Number of public wire bits:       8
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 11
+     IBUF                            4
+     LUT3                            1
+     LUT4                            2
+     OBUF                            4
+

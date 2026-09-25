@@ -1,0 +1,19 @@
+
+3. Printing statistics.
+
+=== mux45_1 ===
+
+   Number of wires:                 24
+   Number of wire bits:           1207
+   Number of public wires:           6
+   Number of public wire bits:    1109
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 70
+     IBUF                           52
+     LUT5                            1
+     LUT6                           15
+     MUXF7                           1
+     OBUF                            1
+

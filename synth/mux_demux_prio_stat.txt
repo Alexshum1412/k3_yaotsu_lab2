@@ -1,0 +1,24 @@
+
+3. Printing statistics.
+
+=== mux_demux_prio ===
+
+   Number of wires:                 54
+   Number of wire bits:            134
+   Number of public wires:          11
+   Number of public wire bits:      36
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 77
+     IBUF                           23
+     LUT1                            3
+     LUT2                           14
+     LUT3                            2
+     LUT4                            5
+     LUT5                            3
+     LUT6                            5
+     MUXF7                           6
+     MUXF8                           3
+     OBUF                           13
+

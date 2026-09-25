@@ -1,0 +1,7 @@
+build/
+vivado_reports/
+*.o
+*.cf
+.Xil/
+*.jou
+*.log.bak

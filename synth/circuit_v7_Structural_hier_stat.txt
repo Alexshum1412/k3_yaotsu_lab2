@@ -1,0 +1,161 @@
+
+3. Printing statistics.
+
+=== circuit_v7 ===
+
+   Number of wires:                 23
+   Number of wire bits:             23
+   Number of public wires:          18
+   Number of public wire bits:      18
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 19
+     IBUF                            4
+     OBUF                            4
+     n_1000000                       3
+     na3_3000000                     1
+     nao22_3000000                   1
+     nmx2_6000000                    1
+     no3_4000000                     1
+     no3a2_5000000                   1
+     no4_5000000                     1
+     noao2_4000000                   1
+     o2_2000000                      1
+
+=== n_1000000 ===
+
+   Number of wires:                  2
+   Number of wire bits:              2
+   Number of public wires:           2
+   Number of public wire bits:       2
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     INV                             1
+
+=== na3_3000000 ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     LUT3                            1
+
+=== nao22_3000000 ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     LUT4                            1
+
+=== nmx2_6000000 ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     LUT3                            1
+
+=== no3_4000000 ===
+
+   Number of wires:                  4
+   Number of wire bits:              4
+   Number of public wires:           4
+   Number of public wire bits:       4
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     LUT3                            1
+
+=== no3a2_5000000 ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     LUT4                            1
+
+=== no4_5000000 ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     LUT4                            1
+
+=== noao2_4000000 ===
+
+   Number of wires:                  5
+   Number of wire bits:              5
+   Number of public wires:           5
+   Number of public wire bits:       5
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     LUT4                            1
+
+=== o2_2000000 ===
+
+   Number of wires:                  3
+   Number of wire bits:              3
+   Number of public wires:           3
+   Number of public wire bits:       3
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                  1
+     LUT2                            1
+
+=== design hierarchy ===
+
+   circuit_v7                        1
+     n_1000000                       3
+     na3_3000000                     1
+     nao22_3000000                   1
+     nmx2_6000000                    1
+     no3_4000000                     1
+     no3a2_5000000                   1
+     no4_5000000                     1
+     noao2_4000000                   1
+     o2_2000000                      1
+
+   Number of wires:                 64
+   Number of wire bits:             64
+   Number of public wires:          59
+   Number of public wire bits:      59
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 19
+     IBUF                            4
+     INV                             3
+     LUT2                            1
+     LUT3                            3
+     LUT4                            4
+     OBUF                            4
+
