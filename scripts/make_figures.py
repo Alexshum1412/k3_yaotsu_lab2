@@ -205,3 +205,20 @@ t = 300
 plot_waves(d, sig_cp, t - 3, t + 25, "circuit_critical.png", width_in=11,
            marks=[(t, "0 нс"), (t + 2, "2"), (t + 8, "8"), (t + 13, "13"),
                   (t + 18, "18"), (t + 19, "19 нс")])
+
+# ================================================================ Task 3.1
+d = parse_vcd(os.path.join(BUILD, "device_01_tb.vcd"))
+sig = [("x[3:0] (2421)", "test_x", "bus", 4, "bin"),
+       ("y3", "test_y3", "bit", 1, None),
+       ("y2", "test_y2", "bit", 1, None),
+       ("y1", "test_y1", "bit", 1, None),
+       ("y0", "test_y0", "bit", 1, None)]
+plot_waves(d, sig, 0, 160, "conv_full.png", width_in=11)
+
+# ================================================================ Task 3.2
+d = parse_vcd(os.path.join(BUILD, "tb_encoder_12to4.vcd"))
+sig = [("din[9:0]", "din", "bus", 10, "bin"),
+       ("dout[3:0]", "dout", "bus", 4, "bin"),
+       ("dout (дес.)", "dout", "bus", 4, "dec")]
+plot_waves(d, sig, 0, 140, "enc_part1.png", width_in=11)
+plot_waves(d, sig, 140, 300, "enc_part2.png", width_in=11)

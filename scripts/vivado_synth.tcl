@@ -1,4 +1,4 @@
-# Синтез проектов ЛР №2 (задания 3.3 и 3.4) в САПР Vivado для ПЛИС Zynq-7010.
+# Синтез проектов ЛР №2 (задания 3.1-3.4) в САПР Vivado для ПЛИС Zynq-7010.
 # Запуск из корня репозитория:
 #   vivado -mode batch -source scripts/vivado_synth.tcl
 # Отчёты сохраняются в vivado_reports/.
@@ -19,6 +19,11 @@ proc run_synth {name top files arch_top} {
     puts "== $name: done"
 }
 
+# 3.1 - преобразователь кода 2421 -> код Грея
+set t1 $root/task1_code_converter
+run_synth device_01 device_01 [list $t1/XOR2.vhd $t1/OR2.vhd $t1/AND2.vhd $t1/device_01.vhd] {}
+# 3.2 - приоритетный шифратор 10-4
+run_synth encoder_12to4 encoder_12to4 [list $root/task2_priority_encoder/encoder_12to4.vhd] {}
 # 3.3 - мультиплексор 45-1 со стробированием
 run_synth mux45_1 mux45_1 [list $root/task3_mux45/mux45_1.vhd] {}
 # 3.3 (доп.) - MUX/DEMUX с приоритетизацией

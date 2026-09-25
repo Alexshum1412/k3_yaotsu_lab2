@@ -8,6 +8,12 @@ EL="$(ls "$ROOT"/task4_irregular/elements/*.vhd | tr '\n' ' ')"
 CIRC="$ROOT/task4_irregular/circuit_v7.vhd"
 Y() { yosys -q -m ghdl -p "$1"; }
 
+T1="$ROOT/task1_code_converter"
+T1F="$T1/XOR2.vhd $T1/OR2.vhd $T1/AND2.vhd $T1/device_01.vhd"
+Y "ghdl --std=08 $T1F -e device_01;
+   synth_xilinx -family xc7 -flatten -top device_01; tee -q -o device_01_stat.txt stat"
+Y "ghdl --std=08 $ROOT/task2_priority_encoder/encoder_12to4.vhd -e encoder_12to4;
+   synth_xilinx -family xc7 -flatten -top encoder_12to4; tee -q -o encoder_12to4_stat.txt stat"
 Y "ghdl --std=08 $ROOT/task3_mux45/mux45_1.vhd -e mux45_1;
    synth_xilinx -family xc7 -flatten -top mux45_1; tee -q -o mux45_1_stat.txt stat"
 Y "ghdl --std=08 $ROOT/task3_extra_mux_demux/mux_demux_prio.vhd -e mux_demux_prio;
@@ -27,6 +33,13 @@ Y "ghdl --std=08 $EL $CIRC -e circuit_v7 Structural; hierarchy -top circuit_v7; 
 Y "ghdl --std=08 $EL $CIRC -e circuit_v7 Behavioral;
    synth_xilinx -family xc7 -flatten -top circuit_v7; opt_clean -purge;
    show -format dot -prefix map_beh -notitle circuit_v7"
+Y "ghdl --std=08 $T1F -e device_01; hierarchy -top device_01; proc; opt_clean;
+   show -format dot -prefix rtl_device_01 -notitle device_01"
+Y "ghdl --std=08 $ROOT/task2_priority_encoder/encoder_12to4.vhd -e encoder_12to4;
+   synth_xilinx -family xc7 -flatten -top encoder_12to4; opt_clean -purge;
+   show -format dot -prefix map_encoder -notitle encoder_12to4"
+dot -Tpng -Gdpi=150 -Grankdir=LR rtl_device_01.dot -o "$IMG/rtl_device_01.png"
+dot -Tpng -Gdpi=150 -Grankdir=LR map_encoder.dot   -o "$IMG/map_encoder.png"
 dot -Tpng -Gdpi=150 -Grankdir=LR rtl_struct.dot -o "$IMG/rtl_struct.png"
 dot -Tpng -Gdpi=150 -Grankdir=LR map_beh.dot    -o "$IMG/map_beh.png"
 echo "Synthesis done: $S"

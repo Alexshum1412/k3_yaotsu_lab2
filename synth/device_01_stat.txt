@@ -1,0 +1,18 @@
+
+3. Printing statistics.
+
+=== device_01 ===
+
+   Number of wires:                 31
+   Number of wire bits:             34
+   Number of public wires:          31
+   Number of public wire bits:      34
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 12
+     IBUF                            4
+     LUT2                            2
+     LUT3                            2
+     OBUF                            4
+
